@@ -48,3 +48,4 @@
 ### 5 Design UI/UX i Prototypowanie
 [link](https://wms-pajak.vercel.app)
 ### 6 Przetestuj z użytkownikami
+## DALSZA CZĘŚĆ README
