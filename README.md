@@ -46,5 +46,5 @@
 ### 4 Stwórz makiety (Wireframes)
 ### +
 ### 5 Design UI/UX i Prototypowanie
-[link](wms-pajak.vercel.app)
+[link](https://wms-pajak.vercel.app)
 ### 6 Przetestuj z użytkownikami
