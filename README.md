@@ -13,8 +13,11 @@
 > - kadra bazy pająk
 > - kwaterka i pracownicy
 > - kwatermistrz
+
 > ROLE W SYSTEMIE : 
-> - 
+> - administrator - np. kwatermistrz bazy (może wszystko, ma dostęp do admin panelu)
+> - pracownik - np. kwaterka (może widzieć i edytować stan magazynowy)
+> - przeglądający - ktoś xD (może tylko przeglądać)
 ### 2 Określ zakres funkcji (MVP)
 >
 >
