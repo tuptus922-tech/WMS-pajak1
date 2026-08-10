@@ -1,13 +1,21 @@
 # Aplikacja WMS dla bazy pająk
 ## PROJEKT APLIKACJI
-### Krok 1: Szkice na kartce
-> Zanim napisałem kod, rozrysowałem główne ekrany. Chodziło o to, 
-> żeby zaplanować ułożenie najważniejszych przycisków.
-
-### Krok 2: Konfiguracja bazy danych
-> Do działania offline wykorzystałem SQLite.
-> Baza inicjalizuje się przy pierwszym uruchomieniu aplikacji.
-
-### Krok 3: Dodanie ekranu formularza
-> Formularz otwiera się jako nakładka (modal) i domyślnie 
-> wstawia dzisiejszą datę, żeby przyspieszyć klikanie.
+### 1 Zdefiniuj cel i grupę docelową
+>
+>
+### 2 Przeprowadź analizę konkurencji
+>
+>
+### 3 Określ zakres funkcji (MVP)
+>
+>
+### 4 Zaprojektuj architekturę informacji i User Flow
+>
+>
+### 5 Stwórz makiety (Wireframes)
+>
+>
+### 6 Design UI/UX i Prototypowanie
+>
+>
+### 7 Przetestuj z użytkownikami
