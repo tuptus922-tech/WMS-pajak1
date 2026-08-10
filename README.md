@@ -8,12 +8,12 @@
 > - Możliwość szybkiego przypisania wydanego sprzętu do konkretnej osoby/drużyny, aby zminimalizować gubienie wyposażenia
 > - Umożliwienie obsługi magazynu z poziomu smartfona, co przyspieszy wydawanie sprzętu zachowując aktualny stan magazynowy
 > - Automatyzacja procesu inwentaryzacji i generowania raportów po sezonie/obozie
-
+>
 > GRUPA DOCELOWA : 
 > - kadra bazy pająk
 > - kwaterka i pracownicy
 > - kwatermistrz
-
+>
 > ROLE W SYSTEMIE : 
 > - administrator - np. kwatermistrz bazy (może wszystko, ma dostęp do admin panelu)
 > - pracownik - np. kwaterka (może widzieć i edytować stan magazynowy)
