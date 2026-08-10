@@ -1,10 +1,11 @@
 # Aplikacja WMS dla HOSW Pająk
+> Technologia : React + Vite z Supa Base
 ## PROJEKT APLIKACJI
 ### 1 Zdefiniuj cel i grupę docelową
 > **CELE** : 
-> - możliwość łatwego zarządzania stanem magazynowym aby móc na bierząco aktualizować stan magazynowy i zniwelować częste inwentaryzacje mając świadomość aktualnego stanu
-> - posiadanie informacji o stanie magazynowym w czasie rzeczywistym aby wiedzieć na bierząco ile go jest 
-> - posiadanie informacje o stanie sprzetu na magazynie aby wiedzieć czy trzeba dokupić rzeczy , mieć kontrole nad tym kto go mógł zepsuć oraz posiadać statystyki jak szybko sprzęt się psuję (wymaga fizyczengo oznaczania przedmiotów co kąplikuje i wydłuża wydawanie sprzętu)
+> - możliwość łatwego zarządzania stanem magazynowym aby móc na bieżąco aktualizować stan magazynowy i zniwelować częste inwentaryzacje mając świadomość aktualnego stanu
+> - posiadanie informacji o stanie magazynowym w czasie rzeczywistym aby wiedzieć na bieżąco ile go jest 
+> - posiadanie informacje o stanie sprzetu na magazynie aby wiedzieć czy trzeba dokupić rzeczy , mieć kontrole nad tym kto go mógł zepsuć oraz posiadać statystyki jak szybko sprzęt się psuję (wymaga fizyczengo oznaczania przedmiotów co komplikuje i wydłuża wydawanie sprzętu)
 > - Możliwość szybkiego przypisania wydanego sprzętu do konkretnej osoby/drużyny, aby zminimalizować gubienie wyposażenia
 > - Umożliwienie obsługi magazynu z poziomu smartfona, co przyspieszy wydawanie sprzętu zachowując aktualny stan magazynowy
 > - Automatyzacja procesu inwentaryzacji i generowania raportów po sezonie/obozie
@@ -16,7 +17,7 @@
 ### 2 Określ zakres funkcji (MVP)
 > **BAZA SPRZĘTU**
 > To serce aplikacji. Musi pozwalać na szybkie wprowadzenie tego, co baza w ogóle posiada
-> - **Dodawanie/Edycja przedmiotów pojedyńczych** : Nazwa, kategoria, ilość
+> - **Dodawanie/Edycja przedmiotów pojedynczych** : Nazwa, kategoria, ilość
 > - **Oznaczanie stanu** : Sprawny, W naprawie, zepsuty **/** (łatwiejsza opcja) zaznaczanie ile jest sprzetu w danych stanie (nie wymaga fizycznego oznaczania sprzetu i przepisywania tego do systemurzy kazdej operacji)
 > - **Wyświetlanie stanu magazynowego**
 > 
@@ -34,7 +35,7 @@
 >
 > **Prosty podział uprawnień**
 > podstawowy podział ról
-> - **Kwatermistrz (admin)** : Może dodawać nowy sprzęt, modyfikować bazę, zarządzać urzytkownikami
+> - **Kwatermistrz (admin)** : Może dodawać nowy sprzęt, modyfikować bazę, zarządzać użytkownikami
 > - **Pracownik kwaterki (User)** : Może tylko przeglądać stan, wydawać sprzęt, przyjmować zwroty i zgłaszać uszkodzenia
 ### 3 Zaprojektuj architekturę informacji i User Flow
 > **1. Architektura Informacji (Mapa aplikacji)**
