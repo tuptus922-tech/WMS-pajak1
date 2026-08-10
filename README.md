@@ -1,13 +1,33 @@
-# Aplikacja WMS dla bazy pająk
+# Aplikacja WMS dla HOSW Pająk
 ## PROJEKT APLIKACJI
-### Krok 1: Szkice na kartce
-> Zanim napisałem kod, rozrysowałem główne ekrany. Chodziło o to, 
-> żeby zaplanować ułożenie najważniejszych przycisków.
+### 1 Zdefiniuj cel i grupę docelową
+> CELE : 
+> - możliwość łatwego zarządzania stanem magazynowym aby móc na bierząco aktualizować stan magazynowy i zniwelować częste inwentaryzacje mając świadomość aktualnego stanu
+> - posiadanie informacji o stanie magazynowym w czasie rzeczywistym aby wiedzieć na bierząco ile go jest 
+> - posiadanie informacje o stanie sprzetu na magazynie aby wiedzieć czy trzeba dokupić rzeczy , mieć kontrole nad tym kto go mógł zepsuć oraz posiadać statystyki jak szybko sprzęt się psuję 
+> - Możliwość szybkiego przypisania wydanego sprzętu do konkretnej osoby/drużyny, aby zminimalizować gubienie wyposażenia
+> - Umożliwienie obsługi magazynu z poziomu smartfona, co przyspieszy wydawanie sprzętu zachowując aktualny stan magazynowy
+> - Automatyzacja procesu inwentaryzacji i generowania raportów po sezonie/obozie
 
-### Krok 2: Konfiguracja bazy danych
-> Do działania offline wykorzystałem SQLite.
-> Baza inicjalizuje się przy pierwszym uruchomieniu aplikacji.
+> GRUPA DOCELOWA : 
+> - kadra bazy pająk
+> - kwaterka i pracownicy
+> - kwatermistrz
 
-### Krok 3: Dodanie ekranu formularza
-> Formularz otwiera się jako nakładka (modal) i domyślnie 
-> wstawia dzisiejszą datę, żeby przyspieszyć klikanie.
+> ROLE W SYSTEMIE : 
+> - administrator - np. kwatermistrz bazy (może wszystko, ma dostęp do admin panelu)
+> - pracownik - np. kwaterka (może widzieć i edytować stan magazynowy)
+> - przeglądający - ktoś xD (może tylko przeglądać)
+### 2 Określ zakres funkcji (MVP)
+>
+>
+### 3 Zaprojektuj architekturę informacji i User Flow
+>
+>
+### 4 Stwórz makiety (Wireframes)
+>
+>
+### 5 Design UI/UX i Prototypowanie
+>
+>
+### 6 Przetestuj z użytkownikami
