@@ -13,11 +13,6 @@
 > - kadra bazy pająk
 > - kwaterka i pracownicy
 > - kwatermistrz
->
-> **ROLE W SYSTEMIE** : 
-> - administrator - np. kwatermistrz bazy (może wszystko, ma dostęp do admin panelu)
-> - pracownik - np. kwaterka (może widzieć i edytować stan magazynowy)
-> - przeglądający - ktoś xD (może tylko przeglądać)
 ### 2 Określ zakres funkcji (MVP)
 > **BAZA SPRZĘTU**
 > To serce aplikacji. Musi pozwalać na szybkie wprowadzenie tego, co baza w ogóle posiada
@@ -42,12 +37,14 @@
 > - **Kwatermistrz (admin)** : Może dodawać nowy sprzęt, modyfikować bazę, zarządzać urzytkownikami
 > - **Pracownik kwaterki (User)** : Może tylko przeglądać stan, wydawać sprzęt, przyjmować zwroty i zgłaszać uszkodzenia
 ### 3 Zaprojektuj architekturę informacji i User Flow
->
->
+> **1. Architektura Informacji (Mapa aplikacji)**
+> - ****Pulpit (Dashboard)** : Ekran startowy. Pokazuje szybkie statystyki ("Na stanie: 150", "W terenie: 45", "Zepsute: 12") oraz dwa główne przyciski akcji: Wydaj i Przyjmij
+> - **Magazyn (Baza sprzętu)** : Pełna lista posiadanego asortymentu z paskiem wyszukiwania. Możliwość filtrowania po kategoriach (np. Pływające, Narzędzia) i stanie (Sprawny)
+> - **W terenie (Wypożyczenia)** : Tabela pokazująca, jaki sprzęt opuścił magazyn, kto go ma i kiedy go pobrał
+> - **Usterki (Serwis)** : Dedykowana zakładka dla sprzętu o statusie W naprawie lub Zniszczony. To pozwala kwatermistrzowi szybko ocenić, co trzeba dokupić lub naprawić przed kolejnym obozem
+> **Ustawienia (tylko Kwatermistrz)** : Zarządzanie pracownikami (dodawanie kont dla kwaterki) i bazą przedmiotów (dodawanie nowych typów sprzętu)
 ### 4 Stwórz makiety (Wireframes)
->
->
+### +
 ### 5 Design UI/UX i Prototypowanie
->
->
+[link](wms-pajak.vercel.app)
 ### 6 Przetestuj z użytkownikami
