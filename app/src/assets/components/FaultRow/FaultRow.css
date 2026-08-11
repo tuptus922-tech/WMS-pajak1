@@ -1,0 +1,46 @@
+.fault-row {
+  background: #fff;
+  border: 1px solid var(--color-border-fault);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.fault-row__name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.fault-row__stats {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.fault-row__stat {
+  font-weight: 600;
+}
+
+.fault-row__stat--repair {
+  color: var(--color-amber);
+}
+
+.fault-row__stat--broken {
+  color: var(--color-orange);
+}
+
+.fault-row__fix-btn {
+  border: 1px solid var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: var(--font-display);
+}

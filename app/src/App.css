@@ -1,0 +1,25 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.app-frame {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: var(--color-app-bg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 40px rgba(40, 45, 35, 0.12);
+  position: relative;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 96px;
+}

@@ -1,0 +1,36 @@
+.loan-row {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.loan-row__title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.loan-row__meta {
+  font-size: 12px;
+  color: var(--color-muted-2);
+}
+
+.loan-row__receive-btn {
+  border: none;
+  background: var(--color-blue);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: var(--font-display);
+}
+
+.loan-row__receive-btn:hover {
+  background: var(--color-blue-hover);
+}

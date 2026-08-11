@@ -17,8 +17,8 @@
 ### 2 Określ zakres funkcji (MVP)
 > **BAZA SPRZĘTU**
 > To serce aplikacji. Musi pozwalać na szybkie wprowadzenie tego, co baza w ogóle posiada
-> - **Dodawanie/Edycja przedmiotów pojedynczych** : Nazwa, kategoria, ilość
-> - **Oznaczanie stanu** : Sprawny, W naprawie, zepsuty **/** (łatwiejsza opcja) zaznaczanie ile jest sprzetu w danych stanie (nie wymaga fizycznego oznaczania sprzetu i przepisywania tego do systemurzy kazdej operacji)
+> - **Dodawanie/Edycja przedmiotów pojedynczych** : Nazwa, kategoria, ilość, rodzaj, kategoria ,id jesli to np, namiot
+> - **Oznaczanie stanu** : Przy zwracaniu elementow masowych typu koce, lateksy zaznaczasz tylko ile zostalo uszkodzonych , natomist do takich rzeczy jak namioty wpisujesz jego id
 > - **Wyświetlanie stanu magazynowego**
 > 
 > **MODUŁ OPERACYJNY**
@@ -50,3 +50,11 @@
 [link](https://wms-pajak.vercel.app)
 ### 6 Przetestuj z użytkownikami
 ## DALSZA CZĘŚĆ README
+
+## INSTALACJA\
+'''
+npm create vite@latest name -- --template react
+'''
+'''
+npm install @supabase/supabase-js
+'''

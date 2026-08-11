@@ -1,0 +1,37 @@
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.qty-stepper__label {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.qty-stepper__label--danger {
+  color: var(--color-orange);
+}
+
+.qty-stepper__btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-input-border);
+  background: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qty-stepper__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  min-width: 36px;
+  text-align: center;
+}
+
+.qty-stepper__value--danger {
+  color: var(--color-orange);
+}

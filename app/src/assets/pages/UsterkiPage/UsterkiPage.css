@@ -1,0 +1,11 @@
+.usterki-page {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.usterki-page__hint {
+  font-size: 13px;
+  color: var(--color-muted);
+}

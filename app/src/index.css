@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+:root {
+  --color-bg: #efede6;
+  --color-app-bg: #f7f6f1;
+  --color-header: #243d28;
+  --color-header-text: #f2f0e6;
+  --color-header-avatar: #3a5c40;
+  --color-text: #22251f;
+  --color-muted: #6b6a60;
+  --color-muted-2: #8a877b;
+  --color-border: #e2dfd4;
+  --color-border-fault: #e8cbb5;
+  --color-input-border: #d8d4c6;
+  --color-input-border-2: #b9b4a3;
+  --color-primary: #2f6b3a;
+  --color-primary-hover: #28592f;
+  --color-primary-soft: #eef3ec;
+  --color-blue: #1f5f8b;
+  --color-blue-hover: #194d71;
+  --color-orange: #b4551f;
+  --color-amber: #a07617;
+  --color-chip-text: #5a584e;
+
+  --font-body: 'Barlow', sans-serif;
+  --font-display: 'Barlow Semi Condensed', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-primary);
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+input::placeholder {
+  color: #9a968a;
+}
+
+button {
+  font-family: var(--font-body);
+}
