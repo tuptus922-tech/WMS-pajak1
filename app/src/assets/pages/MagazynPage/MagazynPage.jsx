@@ -31,19 +31,20 @@ export default function MagazynPage({
         placeholder="Szukaj, np. lateks…"
       />
       <div className="magazyn-page__chips">
-        {categories.map((c) => (
+        {/* {categories.map((c) => (
           <Chip
             key={c}
             label={c}
             active={c === activeCategory}
             onClick={() => onPickCategory(c)}
           />
-        ))}
+        ))} */}
+        elo
       </div>
       <div className="magazyn-page__list">
-        {items.map((it) => (
+        {/* {items.map((it) => (
           <ItemCard key={it.id} item={it} onIssue={() => onIssueItem(it)} />
-        ))}
+        ))} */}
       </div>
       {isAdmin && (
         <AddItemForm
