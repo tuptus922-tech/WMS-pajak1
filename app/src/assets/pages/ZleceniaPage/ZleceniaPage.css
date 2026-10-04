@@ -1,0 +1,22 @@
+.zlecenia-page {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zlecenia-page__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.zlecenia-page__hint {
+  font-size: 13px;
+  color: var(--color-muted);
+}

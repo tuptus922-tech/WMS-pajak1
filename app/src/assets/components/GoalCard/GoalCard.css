@@ -1,0 +1,50 @@
+.goal-card {
+  background: #fffaf0;
+  border: 1px solid #e6d4a4;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.goal-card--done {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.goal-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.goal-card__kicker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-amber);
+}
+
+.goal-card__reward {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.goal-card__title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.goal-card__desc {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.goal-card .progress-bar {
+  height: 14px;
+  margin-top: 4px;
+  background: #efe3bf;
+}

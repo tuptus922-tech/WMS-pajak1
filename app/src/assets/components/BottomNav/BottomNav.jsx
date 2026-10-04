@@ -8,10 +8,13 @@ export default function BottomNav({ items, activeKey, onNavigate }) {
         return (
           <button
             key={n.key}
-            className="bottom-nav__item"
+            className={'bottom-nav__item' + (active ? ' bottom-nav__item--active' : '')}
             onClick={() => onNavigate(n.key)}
           >
-            <span className="bottom-nav__icon">{n.icon}</span>
+            <span className="bottom-nav__icon">
+              {n.icon}
+              {n.badge > 0 && <span className="bottom-nav__badge">{n.badge}</span>}
+            </span>
             <span
               className={
                 'bottom-nav__label' +

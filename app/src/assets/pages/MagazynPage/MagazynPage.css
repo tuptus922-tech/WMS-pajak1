@@ -5,6 +5,49 @@
   gap: 12px;
 }
 
+.magazyn-page__capacity {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.magazyn-page__capacity-head {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.magazyn-page__incoming {
+  background: #fffaf0;
+  border: 1px dashed #e6d4a4;
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.magazyn-page__incoming-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.magazyn-page__incoming-row span:last-child {
+  color: var(--color-amber);
+  white-space: nowrap;
+}
+
 .magazyn-page__chips {
   display: flex;
   gap: 8px;

@@ -1,0 +1,39 @@
+.trip-row {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trip-row__icon {
+  font-size: 22px;
+}
+
+.trip-row__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trip-row__title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.trip-row__meta {
+  font-size: 12px;
+  color: var(--color-muted-2);
+}
+
+.trip-row__left {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--color-muted);
+  white-space: nowrap;
+}

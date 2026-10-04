@@ -50,3 +50,9 @@ input::placeholder {
 button {
   font-family: var(--font-body);
 }
+
+/* Cienkie paski przewijania w oknie gry */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-input-border-2) transparent;
+}

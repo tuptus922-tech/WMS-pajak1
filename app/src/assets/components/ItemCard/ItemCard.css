@@ -4,14 +4,39 @@
   border-radius: 10px;
   padding: 12px 14px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+.item-card--locked {
+  opacity: 0.55;
+}
+
+.item-card__icon {
+  font-size: 26px;
+  width: 34px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.item-card__body {
+  flex: 1;
+  min-width: 0;
 }
 
 .item-card__name {
   font-weight: 600;
   font-size: 15px;
+}
+
+.item-card__deal {
+  margin-left: 8px;
+  background: var(--color-orange);
+  color: #fff;
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .item-card__meta {
@@ -21,7 +46,8 @@
 
 .item-card__stats {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 2px 10px;
   font-size: 12px;
   margin-top: 4px;
 }
@@ -42,6 +68,14 @@
   color: var(--color-orange);
 }
 
+.item-card__stat--incoming {
+  color: var(--color-amber);
+}
+
+.item-card__stat--locked {
+  color: var(--color-muted);
+}
+
 .item-card__issue-btn {
   border: 1px solid var(--color-primary);
   background: #fff;
@@ -52,6 +86,7 @@
   font-size: 13px;
   cursor: pointer;
   font-family: var(--font-display);
+  flex-shrink: 0;
 }
 
 .item-card__issue-btn:hover {

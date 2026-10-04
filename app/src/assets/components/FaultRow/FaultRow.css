@@ -4,9 +4,19 @@
   border-radius: 10px;
   padding: 12px 14px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+}
+
+.fault-row__icon {
+  font-size: 24px;
+  width: 32px;
+  text-align: center;
+}
+
+.fault-row__body {
+  flex: 1;
+  min-width: 0;
 }
 
 .fault-row__name {
@@ -16,7 +26,8 @@
 
 .fault-row__stats {
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 2px 10px;
   font-size: 12px;
   margin-top: 3px;
 }
@@ -33,14 +44,26 @@
   color: var(--color-orange);
 }
 
+.fault-row__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .fault-row__fix-btn {
   border: 1px solid var(--color-primary);
   background: #fff;
   color: var(--color-primary);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 8px 10px;
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
   font-family: var(--font-display);
+  white-space: nowrap;
+}
+
+.fault-row__fix-btn--scrap {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
 }

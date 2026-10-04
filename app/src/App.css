@@ -1,7 +1,8 @@
 .app-shell {
-  min-height: 100vh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
+  gap: 24px;
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
@@ -10,16 +11,41 @@
 .app-frame {
   width: 100%;
   max-width: 430px;
-  min-height: 100vh;
+  height: 100dvh;
   background: var(--color-app-bg);
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 40px rgba(40, 45, 35, 0.12);
   position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  .app-frame {
+    max-width: 460px;
+  }
 }
 
 .app-content {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 96px;
+  padding-bottom: 84px;
+}
+
+.app-paused {
+  position: absolute;
+  top: 132px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe08a;
+  color: #1c3120;
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  z-index: 6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
 }

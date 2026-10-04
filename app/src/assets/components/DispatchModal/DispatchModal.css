@@ -1,0 +1,175 @@
+.dispatch-modal__summary {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dispatch-modal__client {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.dispatch-modal__meta {
+  font-size: 12px;
+  color: var(--color-muted-2);
+}
+
+.dispatch-modal__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dispatch-modal__line {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.dispatch-modal__line span:first-child {
+  color: var(--color-text);
+}
+
+.dispatch-modal__line--missing {
+  color: var(--color-orange);
+}
+
+.dispatch-modal__buy-btn {
+  border: 1px solid var(--color-orange);
+  background: #fff;
+  color: var(--color-orange);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dispatch-modal__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dispatch-modal__auto {
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dispatch-modal__vehicles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dispatch-modal__vehicle {
+  border: 1px solid var(--color-border);
+  background: #fff;
+  border-radius: 10px;
+  padding: 9px 12px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: left;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.dispatch-modal__vehicle:hover {
+  border-color: var(--color-primary);
+}
+
+.dispatch-modal__vehicle--selected {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.dispatch-modal__vehicle--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dispatch-modal__vehicle-icon {
+  font-size: 20px;
+}
+
+.dispatch-modal__vehicle-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dispatch-modal__vehicle-note {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.dispatch-modal__plan {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.dispatch-modal__plan > div {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dispatch-modal__plan b {
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+.dispatch-modal__plan span {
+  font-size: 11px;
+  color: var(--color-muted);
+}
+
+.dispatch-modal__plan--bad b {
+  color: var(--color-orange);
+}
+
+.dispatch-modal__confirm-btn {
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  width: 100%;
+}
+
+.dispatch-modal__confirm-btn:disabled {
+  background: var(--color-input-border-2);
+  cursor: not-allowed;
+  font-size: 15px;
+}

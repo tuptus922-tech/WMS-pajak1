@@ -1,0 +1,114 @@
+.hud {
+  background: #1c3120;
+  color: var(--color-header-text);
+  padding: 8px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hud__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+}
+
+.hud__stat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.hud__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hud__stat--cash .hud__value {
+  font-size: 18px;
+  color: #ffe08a;
+}
+
+.hud__stat--debt .hud__value {
+  color: #ff9d7a;
+}
+
+.hud__pop {
+  position: absolute;
+  left: 24px;
+  top: -4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: #b9f0a8;
+  pointer-events: none;
+  animation: hud-pop 1.3s ease-out forwards;
+}
+
+@keyframes hud-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-26px) scale(1);
+  }
+}
+
+.hud__speed {
+  margin-left: auto;
+  display: flex;
+  gap: 3px;
+}
+
+.hud__speed-btn {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: var(--color-header-text);
+  border-radius: 7px;
+  min-width: 30px;
+  height: 28px;
+  padding: 0 5px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.hud__speed-btn--active {
+  background: #ffe08a;
+  border-color: #ffe08a;
+  color: #1c3120;
+}
+
+.hud__xp {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud__xp .progress-bar {
+  background: rgba(255, 255, 255, 0.16);
+  height: 6px;
+}
+
+.hud__xp .progress-bar__fill {
+  background: #ffe08a;
+}
+
+.hud__xp-label {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.85;
+}

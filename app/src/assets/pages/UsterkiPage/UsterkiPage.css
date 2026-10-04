@@ -9,3 +9,60 @@
   font-size: 13px;
   color: var(--color-muted);
 }
+
+.usterki-page__workshop {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usterki-page__workshop-head {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.usterki-page__job {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.usterki-page__job span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usterki-page__job span:last-child {
+  color: var(--color-amber);
+  white-space: nowrap;
+}
+
+.usterki-page__idle {
+  font-size: 13px;
+  color: var(--color-muted-2);
+}
+
+.usterki-page__all-btn {
+  border: 1px solid var(--color-primary);
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}

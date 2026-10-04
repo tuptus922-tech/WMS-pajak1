@@ -1,60 +1,70 @@
-# Aplikacja WMS dla HOSW Pająk
-> Technologia : React + Vite z Supa Base
-## PROJEKT APLIKACJI
-### 1 Zdefiniuj cel i grupę docelową
-> **CELE** : 
-> - możliwość łatwego zarządzania stanem magazynowym aby móc na bieżąco aktualizować stan magazynowy i zniwelować częste inwentaryzacje mając świadomość aktualnego stanu
-> - posiadanie informacji o stanie magazynowym w czasie rzeczywistym aby wiedzieć na bieżąco ile go jest 
-> - posiadanie informacje o stanie sprzetu na magazynie aby wiedzieć czy trzeba dokupić rzeczy , mieć kontrole nad tym kto go mógł zepsuć oraz posiadać statystyki jak szybko sprzęt się psuję (wymaga fizyczengo oznaczania przedmiotów co komplikuje i wydłuża wydawanie sprzętu)
-> - Możliwość szybkiego przypisania wydanego sprzętu do konkretnej osoby/drużyny, aby zminimalizować gubienie wyposażenia
-> - Umożliwienie obsługi magazynu z poziomu smartfona, co przyspieszy wydawanie sprzętu zachowując aktualny stan magazynowy
-> - Automatyzacja procesu inwentaryzacji i generowania raportów po sezonie/obozie
->
-> **GRUPA DOCELOWA** : 
-> - kadra bazy pająk
-> - kwaterka i pracownicy
-> - kwatermistrz
-### 2 Określ zakres funkcji (MVP)
-> **BAZA SPRZĘTU**
-> To serce aplikacji. Musi pozwalać na szybkie wprowadzenie tego, co baza w ogóle posiada
-> - **Dodawanie/Edycja przedmiotów pojedynczych** : Nazwa, kategoria, ilość, rodzaj, kategoria ,id jesli to np, namiot
-> - **Oznaczanie stanu** : Przy zwracaniu elementow masowych typu koce, lateksy zaznaczasz tylko ile zostalo uszkodzonych , natomist do takich rzeczy jak namioty wpisujesz jego id
-> - **Wyświetlanie stanu magazynowego**
-> 
-> **MODUŁ OPERACYJNY**
-> Zastępuje papierowy "zeszyt kwatermistrza" i realizuje cel informacji w czasie rzeczywistym
-> - **Szybkie wydawanie** : Wybór przedmiotu z listy ➔ podanie ilości ➔ wpisanie/wybór komu wydano (np. Podobóz 1, ratownik WOPR, drużyna X)
-> - **Szybkie przyjmowanie** : Zaznaczenie powrotu sprzętu na magazyn (takie samo flow jak wydawanie)
-> - **Opcja zmiany stanu przy zwrocie** : (w zależności od opcji zarządzania stanem) przy zwrocie zaznacza że jest uszkodzony wpisuje ID przedmiotu i zaznacza stan **/** przy zwrocie zaznacza że np. jeden lateks jest uszkodzony
->
-> **Dashboard Czasu Rzeczywistego (Przegląd)**
-> Widok, który po otwarciu od razu daje odpowiedź na pytanie "na czym stoimy"
-> - **Lista dostępnego sprzętu** : Pokazuje tylko to, co leży fizycznie w magazynie i ma status Sprawny
-> - **Lista sprzętu w terenie** : Tabela pokazująca: Co, u kogo i od kiedy
-> - **Prosta wyszukiwarka** : Możliwość wpisania słowa "lateks" i szybkiego przefiltrowania wyników
->
-> **Prosty podział uprawnień**
-> podstawowy podział ról
-> - **Kwatermistrz (admin)** : Może dodawać nowy sprzęt, modyfikować bazę, zarządzać użytkownikami
-> - **Pracownik kwaterki (User)** : Może tylko przeglądać stan, wydawać sprzęt, przyjmować zwroty i zgłaszać uszkodzenia
-### 3 Zaprojektuj architekturę informacji i User Flow
-> **1. Architektura Informacji (Mapa aplikacji)**
-> - **Pulpit (Dashboard)** : Ekran startowy. Pokazuje szybkie statystyki ("Na stanie: 150", "W terenie: 45", "Zepsute: 12") oraz dwa główne przyciski akcji: Wydaj i Przyjmij
-> - **Magazyn (Baza sprzętu)** : Pełna lista posiadanego asortymentu z paskiem wyszukiwania. Możliwość filtrowania po kategoriach (np. Pływające, Narzędzia) i stanie (Sprawny)
-> - **W terenie (Wypożyczenia)** : Tabela pokazująca, jaki sprzęt opuścił magazyn, kto go ma i kiedy go pobrał
-> - **Usterki (Serwis)** : Dedykowana zakładka dla sprzętu o statusie W naprawie lub Zniszczony. To pozwala kwatermistrzowi szybko ocenić, co trzeba dokupić lub naprawić przed kolejnym obozem
-> **Ustawienia (tylko Kwatermistrz)** : Zarządzanie pracownikami (dodawanie kont dla kwaterki) i bazą przedmiotów (dodawanie nowych typów sprzętu)
-### 4 Stwórz makiety (Wireframes)
-### +
-### 5 Design UI/UX i Prototypowanie
-[link](https://wms-pajak.vercel.app)
-### 6 Przetestuj z użytkownikami
-## DALSZA CZĘŚĆ README
+# Pająk Logistics 🕷️
 
-## INSTALACJA\
-'''
-npm create vite@latest name -- --template react
-'''
-'''
-npm install @supabase/supabase-js
-'''
+Gra logistyczna zrobiona z aplikacji WMS dla HOSW Pająk. Zamiast prowadzić zeszyt kwatermistrza — grasz kwatermistrzem: zaczynasz z szopą, taczką i 600 zł, a kończysz z hubem logistycznym, flotą ciężarówek, barką i śmigłowcem.
+
+> Technologia: React + Vite. Bez backendu — gra zapisuje się w przeglądarce (localStorage).
+
+## Jak uruchomić
+
+```bash
+cd app
+npm install
+npm run dev
+```
+
+Potem otwórz adres, który wypisze Vite (domyślnie http://localhost:5173).
+
+| Polecenie | Co robi |
+|---|---|
+| `npm run dev` | serwer deweloperski |
+| `npm run build` | wersja produkcyjna w `app/dist` |
+| `npm test` | testy silnika gry |
+| `npm run sim -- 80 1` | bot gra 80 dni (ziarno 1) i wypisuje przebieg — do strojenia balansu |
+| `npm run lint` | oxlint |
+
+## Jak się gra
+
+Pętla jest ta sama, co w prawdziwym magazynie bazy — **wydaj → teren → przyjmij → napraw**:
+
+1. **Zlecenia** — klienci (podobozy, WOPR, kuchnia, OSP, festiwal…) proszą o sprzęt i zapasy. Sprawdzasz stan, dobierasz pojazd i wysyłasz kurs. Zapłata przychodzi przy dostawie.
+2. **Magazyn** — dokupujesz towar w hurtowni. Ceny zmieniają się codziennie, jest okazja dnia. Każda sztuka sprzętu zajmuje miejsce na półce, także ta wydana w teren.
+3. **Teren** — mapa okolicy z jeżdżącymi pojazdami. Wypożyczony sprzęt po kilku dniach wraca na rampę i trzeba go przyjąć.
+4. **Usterki** — część sprzętu wraca uszkodzona. Naprawiasz w warsztacie albo oddajesz na złom.
+5. **Baza** — flota, budynki, kadra, sprawności, zadania, odznaki, raport i opcje.
+
+Sterowanie: spacja = pauza, klawisze 1 / 2 / 3 = tempo 1× / 2× / 4×.
+
+## Co jest w grze
+
+- **73 towary** w 8 kategoriach: od koca i menażki po scenę modułową, halę namiotową i telebim
+- **19 miejsc** na mapie i **23 klientów** — drogą, bezdrożami i wodą
+- **16 pojazdów**: taczka, rower cargo, Żuk, Star 266, motorówka, barka, dron, TIR, śmigłowiec…
+- **11 budynków** do rozbudowy (magazyn, warsztat, biuro, garaż, rampa, chłodnia, stacja paliw, przystań, lądowisko…)
+- **10 osób kadry**, w tym automaty: magazynier, serwisant, mechanik i dyspozytor
+- **22 sprawności** kupowane za punkty z awansów
+- **28 zdarzeń losowych** z wyborami (burza, Sanepid, dzik w spiżarni, kontrola drogowa…)
+- **45 zadań** prowadzących od pierwszego wydania do Jamboree i **40 odznak**
+- zlecenia zwykłe, pilne, VIP i kontrakty z karą umowną
+- pogoda, wahania cen, zużycie pojazdów, renoma, raport tygodnia z oceną Komendy
+- 20 stopni: od Biszkopta do Legendy Pająka
+
+## Jak to jest zbudowane
+
+```
+app/src/
+  game/
+    engine.js        symulacja — czysty JS bez Reacta, działa też w Node
+    store.js         zegar gry, zapis, hook useGame()
+    view.js          tłumaczy stan gry na dane dla komponentów
+    sfx.js           dźwięki z Web Audio
+    data/            cała zawartość: towary, mapa, flota, budynki, zdarzenia, zadania, odznaki
+  assets/components/ komponenty (część z szablonu WMS: ItemCard, LoanRow, FaultRow, StatsRow…)
+  assets/pages/      Pulpit, Zlecenia, Magazyn, Teren, Usterki, Baza
+app/tests/           testy silnika i bot do symulacji
+```
+
+Nowa zawartość to zwykle jeden wpis w `game/data/` — np. nowy towar w `items.js` albo zdarzenie w `events.js`. Liczby balansu (ceny, stawki, szanse) siedzą w danych, wzory w `engine.js`.
+
+## Skąd to się wzięło
+
+Projekt jest forkiem [WMS-pajak](https://github.com/LegitBiscu150/WMS-pajak) — aplikacji do zarządzania magazynem sprzętu bazy harcerskiej. Gra zachowuje jej wygląd, komponenty i nazewnictwo (Pulpit, Magazyn, Teren, Usterki, WYDAJ / PRZYJMIJ), ale logowanie i baza Supabase zostały usunięte.
